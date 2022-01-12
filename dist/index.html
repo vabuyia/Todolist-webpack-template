@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
-<script defer src="/index.bundle.js"></script></head>
-<body>
-    <h1>Hello webpack!</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>ToDo List</title>
+  <script defer src="index.bundle.js"></script></head>
+  <body>
+    <div class="todoList">
+      <div class="cover-img">
+        <div class="cover-inner">
+          <h3 class="dayName">Today's To Do</h3>
+          <i class="fas fa-sync"></i>
+        </div>
+        <hr />
+      </div>
+      <div class="content">
+        <form class="add">
+          <input type="text" name="add" placeholder="Add to your list...." />
+          <div class="input-buttons">
+            <a href="#0" class="add-todo">
+              <i class="fas"> &#x21B2;</i>
+            </a>
+          </div>
+        </form>
+        <hr />
+        <div class="todos-list">
+          <!--To Do List Items will be displayed here.-->
+        </div>
+        <hr />
+        <div class="clear"><button>Clear all completed</button></div>
+      </div>
+    </div>
+  </body>
 </html>
