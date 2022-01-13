@@ -42,8 +42,10 @@ body {
 }
 
 .list {
-  flex-grow: 1;
-  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 6px 0;
 }
 
 .add-task {
@@ -85,14 +87,6 @@ body {
   font-size: 16px;
   color: #888;
   background-color: rgb(243, 243, 243);
-  cursor: pointer;
-}
-
-.list {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  margin: 6px 0;
 }
 
 .list ul {
