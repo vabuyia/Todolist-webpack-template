@@ -4,43 +4,66 @@
 }
 
 body {
+  height: 100vh;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
   background-color: #eee;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-.todoList {
-  width: 40%;
-  height: auto;
-  margin: 5% auto 0 auto;
-  box-shadow: 2px 2px 10px 3px #888;
+.container {
+  background: #eee;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-hr {
-  margin: 0;
+.todo-list {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  max-width: 600px;
+  height: 500px;
 }
 
-.fas {
+.header {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h5 {
   color: black;
-  width: 50px;
+  text-align: center;
 }
 
-.cover-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  padding: 0 10px;
-  background-color: #fff;
-  cursor: pointer;
+.list {
+  flex-grow: 1;
+  padding: 2em;
 }
 
-.add {
+.add-task {
+  padding: 5px 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  padding: 0 10px;
-  background-color: #fff;
+}
+
+.add-task input {
+  border: 1px solid #eee;
+  flex-grow: 1;
+  margin-left: 5px;
+  padding: 5px 15px;
+  width: 320px;
+  outline: none;
+}
+
+.add-task button {
+  outline: none;
+  border: none;
+  padding: 1em;
   cursor: pointer;
 }
 
@@ -51,6 +74,7 @@ hr {
   align-content: center;
   background-color: rgb(243, 243, 243);
   cursor: pointer;
+  border: 1px solid #fff;
 }
 
 .clear button {
@@ -61,18 +85,17 @@ hr {
   font-size: 16px;
   color: #888;
   background-color: rgb(243, 243, 243);
+  cursor: pointer;
 }
 
-form input {
-  width: 80%;
-  height: 90%;
-}
-
-.todos-list {
+.list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  padding: 0 10px;
-  background-color: #fff;
+  padding: 10px;
+  margin: 6px 0;
+}
+
+.list ul {
+  list-style: none;
+  flex-direction: column;
 }

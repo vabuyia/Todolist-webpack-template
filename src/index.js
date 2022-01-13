@@ -1,6 +1,9 @@
-import './style.css';
+let inputElement = document.querySelector('input');
+let formElement = document.querySelector('form');
+let listElement = document.querySelector('ul');
+let totalTasksElement = document.querySelector('#total-tasks');
 
-const items = [
+let taskList = [
   {
     description: 'Eating supper.',
     completed: false,
@@ -20,26 +23,38 @@ const items = [
     description: 'Attending music concert.',
     completed: false,
     index: 4,
-  },  
+  },
 ];
 
-const todos-list = document.getElementById(todos-list);
+function populateList() {
+  //taskList.forEach(function(item){
+  for (let i = 0; i < taskList.length; i++) {
+    let newItem = document.createElement('li');
 
-items.forEach((item) => {
-  const list = document.createElement('div');
-  const inputcheck= document.createElement('input');
-  var paragraph = document.createElement('p');
-  const Image = document.createElement('i');
+    //Add checkbox
+    const inputCheckbox = document.createElement('input');
+    inputCheckbox.type = 'checkbox';
+    inputCheckbox.className = 'box';
+    newItem.appendChild(inputCheckbox);
+    inputCheckbox.style.marginRight = '10px';
 
-  paragraph.innerHTML= task.description;
+    //Add new span for text
+    let span = document.createElement('span');
+    span.innerHTML = taskList[i].description;
+    newItem.appendChild(span);
 
+    //Add delete button
+    let anchorElement = document.createElement('a');
+    anchorElement.classList.add('delete');
+    anchorElement.innerHTML = '<i class="fas fa-trash-alt"></i>';
+    anchorElement.style.float = 'right';
+    anchorElement.style.paddingLeft = '150px';
 
-  list.appendChild(inputcheck);
-  list.appendChild(paragraph);
-  list.appendChild(Image);
+    newItem.appendChild(anchorElement);
 
-  todos-list.appendChild(list);
+    //add Li to UL
+    listElement.appendChild(newItem);
+  }
+}
 
-
-});
-
+populateList();
