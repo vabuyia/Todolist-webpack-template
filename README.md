@@ -11,6 +11,7 @@
 ### Setup
 
 > Clone the repository to your local machine and run:
+
 ```
 npm install
 npm install --save-dev webpack
@@ -25,19 +26,20 @@ npm install --save-dev webpack-dev-server
 
 ### Deployment
 
- > run:
- ```
- npm run build
- npm start
- ```
+> run:
+
+```
+npm run build
+npm start
+```
 
 ## Authors
 
-👤 **Ibrohim Rasulov**
+👤 **Vincent Abuya**
 
-- [GitHub](https://github.com/IbrohimRasulov)
-- [Twitter](https://twitter.com/IbrohimRasu1ov)
-- [LinkedIn](https://www.linkedin.com/in/ibrohim-rasulov-a88352209/)
+- [GitHub](https://github.com/vabuyia)
+- [Twitter](https://twitter.com/vabuyia)
+- [LinkedIn](https://www.linkedin.com/in/vabuyia)
 
 ## Show your support
 
