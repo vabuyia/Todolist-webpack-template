@@ -28,7 +28,7 @@ const taskList = [
 
 function populateList() {
   for (let i = 0; i < taskList.length; i++) {
-    let newItem = document.createElement('li');
+    const newItem = document.createElement('li');
 
     const inputCheckbox = document.createElement('input');
     inputCheckbox.type = 'checkbox';
@@ -36,9 +36,9 @@ function populateList() {
     newItem.appendChild(inputCheckbox);
     inputCheckbox.style.marginRight = '10px';
 
-    let span = document.createElement('span');
-    span.innerHTML = taskList[i].description;
-    newItem.appendChild(span);
+    spanElement = document.createElement('span');
+    spanElement.innerHTML = taskList[i].description;
+    newItem.appendChild(spanElement);
 
     const anchorElement = document.createElement('a');
     anchorElement.classList.add('delete');
