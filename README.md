@@ -35,7 +35,7 @@ npm start
 
 ## Authors
 
-👤 **Ibrohim Rasulov**
+👤 **Vincent Abuya**
 
 - [GitHub](https://github.com/vabuyia)
 - [Twitter](https://twitter.com/vabuyia)
