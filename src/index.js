@@ -36,7 +36,7 @@ function populateList() {
     newItem.appendChild(inputCheckbox);
     inputCheckbox.style.marginRight = '10px';
 
-    spanElement = document.createElement('span');
+    const spanElement = document.createElement('span');
     spanElement.innerHTML = taskList[i].description;
     newItem.appendChild(spanElement);
 
