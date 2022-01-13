@@ -1,3 +1,6 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable-next-line no-plusplus */
+
 const listElement = document.querySelector('ul');
 
 const taskList = [
