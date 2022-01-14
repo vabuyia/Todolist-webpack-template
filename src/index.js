@@ -1,9 +1,10 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable-next-line no-plusplus */
+const inputElement = document.querySelector('input')
+const formElement = document.querySelector('form')
+const listElement = document.querySelector('ul')
+const totalTasksElement = document.querySelector('#total-tasks')
+const buttonElement = document.getElementById(btn)
 
-const listElement = document.querySelector('ul');
-
-const taskList = [
+let taskList = [
   {
     description: 'Eating supper.',
     completed: false,
@@ -24,32 +25,50 @@ const taskList = [
     completed: false,
     index: 4,
   },
-];
+]
 
 function populateList() {
+  //taskList.forEach(function(item){
   for (let i = 0; i < taskList.length; i++) {
-    const newItem = document.createElement('li');
+    let newItem = document.createElement('li')
 
-    const inputCheckbox = document.createElement('input');
-    inputCheckbox.type = 'checkbox';
-    inputCheckbox.className = 'box';
-    newItem.appendChild(inputCheckbox);
-    inputCheckbox.style.marginRight = '10px';
+    //Add checkbox
+    const inputCheckbox = document.createElement('input')
+    inputCheckbox.type = 'checkbox'
+    inputCheckbox.className = 'box'
+    newItem.appendChild(inputCheckbox)
+    inputCheckbox.style.marginRight = '10px'
 
-    const spanElement = document.createElement('span');
-    spanElement.innerHTML = taskList[i].description;
-    newItem.appendChild(spanElement);
+    //Add new span for text
+    let span = document.createElement('span')
+    span.innerHTML = taskList[i].description
+    newItem.appendChild(span)
 
-    const anchorElement = document.createElement('a');
-    anchorElement.classList.add('delete');
-    anchorElement.innerHTML = '<i class="fas fa-trash-alt"></i>';
-    anchorElement.style.float = 'right';
-    anchorElement.style.paddingLeft = '150px';
+    //Add edit button
+    const editElement = document.createElement('button')
+    editElement.innerHTML = '<i class="fas fa-edit"></i>'
+    editElement.classList.add('edit')
+    newItem.appendChild(editElement)
+    editElement.style.float = 'center'
+    editElement.style.color = 'blue'
 
-    newItem.appendChild(anchorElement);
+    //Add delete button
+    let anchorElement = document.createElement('a')
+    anchorElement.classList.add('delete')
+    anchorElement.innerHTML = '<i class="fas fa-trash-alt"></i>'
+    anchorElement.style.float = 'right'
+    anchorElement.style.paddingLeft = '150px'
+    anchorElement.style.color = 'red'
 
-    listElement.appendChild(newItem);
+    newItem.appendChild(anchorElement)
+
+    //add Li to UL
+    listElement.appendChild(newItem)
+
+    totalTasksElement.innerHTML = taskList.length
+
+    //buttonElement.addEventListener("click", function(){
   }
 }
 
-populateList();
+populateList()
