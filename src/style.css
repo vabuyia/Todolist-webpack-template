@@ -41,13 +41,6 @@ body {
   text-align: center;
 }
 
-.list {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  margin: 6px 0;
-}
-
 .add-task {
   padding: 5px 0;
   display: flex;
@@ -81,12 +74,20 @@ body {
 
 .clear button {
   border: none;
-  cursor: pointer;
   margin: 15px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #888;
   background-color: rgb(243, 243, 243);
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 6px 0;
+  flex-grow: 1;
 }
 
 .list ul {
